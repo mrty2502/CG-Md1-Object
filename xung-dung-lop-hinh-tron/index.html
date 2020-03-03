@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Circle</title>
+</head>
+<body>
+<script>
+    let Circle = function (radius, color) {
+        this.Cradius = radius;
+        this.Ccolor = color;
+
+        this.getCradius = function () {
+            return this.Cradius;
+        };
+        this.getCcolor = function () {
+            return this.Ccolor;
+        };
+        this.getArea = function () {
+            return Math.PI * Math.pow(radius, 2);
+        }
+    };
+    let circle = new Circle(2, 'red');
+    let radius = circle.getCradius();
+    let color = circle.getCcolor();
+    let area = circle.getArea();
+    alert('bán kính là: ' + radius + ' có diện tích là: ' + area + ' mau sac la: ' + color);
+
+
+</script>
+
+</body>
+</html>

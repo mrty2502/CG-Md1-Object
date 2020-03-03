@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp Date</title>
+</head>
+<body>
+<script>
+    let myDate = function (day, month, year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        this.date = [day.toString(), month.toString(), year.toString()];
+
+        this.getDay = function () {
+            return this.day;
+        };
+        this.getMonth = function () {
+            return this.month;
+        };
+        this.getYear = function () {
+            return this.year;
+        };
+        this.getDate = function () {
+            return this.date;
+        };
+        this.setDay = function (day) {
+            this.day = day;
+        };
+        this.setMonth = function (month) {
+            this.month = month;
+        };
+        this.setYear = function (year) {
+            this.year = year;
+        };
+        this.setDate = function (day, month, year) {
+            this.setDay(day);
+            this.setMonth(month);
+            this.setYear(year);
+        }
+    };
+    let date = new myDate(10, 10, 220);
+    let day = date.getDay();
+    let month = date.getMonth();
+    let year = date.getYear();
+
+    alert(day + '/' + month + '/' + year);
+
+    let birthday = new myDate(17, 9, 1992);
+    alert(birthday.getDate().join("/"));
+
+
+</script>
+
+</body>
+</html>
