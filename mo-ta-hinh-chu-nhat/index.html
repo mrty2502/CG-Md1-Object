@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rectangle</title>
+</head>
+<body>
+<script>
+    let Rectangle = function (x, y) {
+        this.width = x;
+        this.length = y;
+
+        this.getWidth = function () {
+            return this.width;
+        };
+        this.getLength = function () {
+            return this.length;
+        };
+        this.getArea = function () {
+            return width * length;
+        };
+        this.getPerimeter = function () {
+            return (width + length) * 2;
+
+        }
+    };
+    let rectangle = new Rectangle(5, 6);
+    let width = rectangle.getWidth();
+    let length = rectangle.getLength();
+    let area = rectangle.getArea();
+    let perimeter = rectangle.getPerimeter();
+    alert('diện tích là: ' + area + ' và chu vi là: ' + perimeter);
+
+</script>
+</body>
+</html>
