@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    let Temperature = function (number) {
+        this.doC = number;
+
+        this.getCtemp = function () {
+            return this.doC;
+        };
+        this.getFtemp = function () {
+            return number * 18 - 32;
+        };
+        this.getKtemp = function () {
+            return number + 273.5;
+        }
+    };
+
+    let toChangeTemperature = new Temperature(5);
+    let changeToFtemp = toChangeTemperature.getFtemp();
+    let changetoKtemp = toChangeTemperature.getKtemp();
+    alert(changeToFtemp);
+    alert(changetoKtemp);
+</script>
+</body>
+</html>
